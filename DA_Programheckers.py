@@ -32,3 +32,29 @@ class NewSpider(scrapy.Spider):
                next_page = response.css(Page_selector).extract_first()
                if next_page:
                    yield scrapy.Request(response.urljoin(next_page), callback=self.parse)
+                
+ #unittest test
+class SimpleTest(unittest.TestCase):
+
+    def test_51(self):
+        print(r.text)
+
+    def test_52(self):
+        self.assertEqual(r.status_code, 200)
+
+    def test_53(self):
+        print(h.headers[x])
+
+    def test_54(self):
+        self.assertEqual(rh.text, 'User Agent : Mobile')
+
+    def test_6(self):
+            yield {'Image Link': x.xpath(newsel).extract_first(), }
+
+    def test_7(self):
+        next_page = response.css(Page_selector).extract_first()
+        if next_page:
+          yield scrapy.Request(response.urljoin(next_page), callback=self.parse)
+
+if __name__ == '__main__':
+    unittest.main()
